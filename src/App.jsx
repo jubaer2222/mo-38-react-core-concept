@@ -2,15 +2,23 @@
 
 import './App.css'
 import ToDo from './Todo'
+import Actor from './Actor'
 
 function App() {
 
-  const time = 50;
+  const actors = ['Bappa Raj', 'Omor sani' , 'Salman Shah']
+
+  // const time = 50;
 
   return (
     <>
       <h1>React Core Concepts</h1>
-      <ToDo
+
+    {
+      actors.map(actor => <Actor actor={actor}></Actor>)
+    }
+
+      {/* <ToDo
         task="Learn react"
         isDone={true}
         time={time}></ToDo>
@@ -20,7 +28,8 @@ function App() {
       <ToDo
         task="Take a Shower"
         isDone={true} 
-        time="30"></ToDo>
+        time="30"></ToDo> */}
+
       {/* <Student></Student>
       <Student></Student>
       <Person></Person>
